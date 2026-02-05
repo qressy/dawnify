@@ -1,0 +1,597 @@
+{% comment %}
+  Category Grid Section
+  Features: Masonry layout - 1 large left image, 2 stacked right images
+{% endcomment %}
+
+<style>
+  .category-grid-section-{{ section.id }} {
+    background-color: #ffffff;
+    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+  }
+
+  .category-grid-container-{{ section.id }} {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .section-heading-{{ section.id }} {
+    text-align: {{ section.settings.heading_alignment }};
+    margin-bottom: {{ section.settings.heading_spacing }}px;
+  }
+
+  .section-heading-{{ section.id }} h2 {
+    font-size: {{ section.settings.heading_font_size }}px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    color: #000000;
+  }
+
+  .category-grid-{{ section.id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: {{ section.settings.grid_gap }}px;
+  }
+
+  .category-card-{{ section.id }} {
+    position: relative;
+    overflow: hidden;
+    border-radius: {{ section.settings.border_radius }}px;
+  }
+
+  .category-card-{{ section.id }}.card-large {
+    grid-row: span 2;
+    aspect-ratio: unset;
+  }
+
+  .category-card-{{ section.id }}.card-small {
+    aspect-ratio: 16 / 9;
+  }
+
+  .category-card-{{ section.id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+
+  .category-card-{{ section.id }}:hover img {
+    transform: scale(1.05);
+  }
+
+  .category-overlay-{{ section.id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 40px;
+  }
+
+  .category-overlay-{{ section.id }}.position-top-left {
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .category-overlay-{{ section.id }}.position-top-center {
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+  }
+
+  .category-overlay-{{ section.id }}.position-top-right {
+    justify-content: flex-start;
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  .category-overlay-{{ section.id }}.position-center-left {
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .category-overlay-{{ section.id }}.position-center {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .category-overlay-{{ section.id }}.position-center-right {
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  .category-overlay-{{ section.id }}.position-bottom-left {
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .category-overlay-{{ section.id }}.position-bottom-center {
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+  }
+
+  .category-overlay-{{ section.id }}.position-bottom-right {
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  .category-title-{{ section.id }} {
+    color: #ffffff;
+    font-size: {{ section.settings.title_font_size }}px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: {{ section.settings.title_spacing }}px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .category-button-{{ section.id }} {
+    display: inline-block;
+    color: #ffffff;
+    font-size: {{ section.settings.button_font_size }}px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 8px 20px;
+    border: 1px solid #3d1d10;
+    background-color:#3d1d10;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 6px!important;
+  }
+
+  .category-button-{{ section.id }}::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    transition: left 0.4s ease;
+    z-index: -1;
+  }
+
+  .category-button-{{ section.id }}:hover::before {
+    left: 0;
+  }
+
+  .category-button-{{ section.id }}:hover {
+    border-color: #ffffff;
+    color: #3d1d10;
+  }
+
+  @media screen and (max-width: 989px) {
+    .section-heading-{{ section.id }} h2 {
+      font-size: {{ section.settings.heading_font_size_mobile }}px;
+    }
+
+    .section-heading-{{ section.id }} {
+      margin-bottom: {{ section.settings.heading_spacing_mobile }}px;
+    }
+
+    .category-grid-{{ section.id }} {
+      gap: {{ section.settings.grid_gap_mobile }}px;
+    }
+
+    .category-overlay-{{ section.id }} {
+      padding: 30px;
+    }
+
+    .category-title-{{ section.id }} {
+      font-size: {{ section.settings.title_font_size_mobile }}px;
+      letter-spacing: 2px;
+    }
+
+    .category-button-{{ section.id }} {
+      font-size: {{ section.settings.button_font_size_mobile }}px;
+      padding: 10px 24px;
+      letter-spacing: 1.5px;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .category-grid-{{ section.id }} {
+      grid-template-columns: 1fr;
+      gap: {{ section.settings.grid_gap_mobile }}px;
+    }
+
+    .category-card-{{ section.id }}.card-large {
+      grid-row: span 1;
+      aspect-ratio: 4 / 3;
+    }
+
+    .category-card-{{ section.id }}.card-small {
+      aspect-ratio: 4 / 3;
+    }
+
+    .category-grid-section-{{ section.id }} {
+      padding: {{ section.settings.padding_top_mobile }}px 0 {{ section.settings.padding_bottom_mobile }}px;
+    }
+
+    .category-overlay-{{ section.id }} {
+      padding: 24px;
+    }
+  }
+</style>
+
+<section class="category-grid-section-{{ section.id }}">
+  <div class="category-grid-container-{{ section.id }}">
+    {% if section.settings.section_heading != blank %}
+      <div class="section-heading-{{ section.id }}">
+        <h2>{{ section.settings.section_heading }}</h2>
+      </div>
+    {% endif %}
+
+    <div class="category-grid-{{ section.id }}">
+      {% for block in section.blocks %}
+        {% if forloop.index == 1 %}
+          <div class="category-card-{{ section.id }} card-large" {{ block.shopify_attributes }}>
+        {% else %}
+          <div class="category-card-{{ section.id }} card-small" {{ block.shopify_attributes }}>
+        {% endif %}
+          {% if block.settings.image %}
+            <img 
+              src="{{ block.settings.image | img_url: '1000x' }}" 
+              srcset="{{ block.settings.image | img_url: '400x' }} 400w,
+                      {{ block.settings.image | img_url: '600x' }} 600w,
+                      {{ block.settings.image | img_url: '800x' }} 800w,
+                      {{ block.settings.image | img_url: '1000x' }} 1000w,
+                      {{ block.settings.image | img_url: '1200x' }} 1200w"
+              sizes="(max-width: 749px) 100vw, {% if forloop.index == 1 %}50vw{% else %}50vw{% endif %}"
+              alt="{{ block.settings.title | escape }}"
+              loading="lazy"
+            >
+          {% else %}
+            {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+          {% endif %}
+          
+          <div class="category-overlay-{{ section.id }} position-{{ block.settings.text_position }}">
+            {% if block.settings.title != blank %}
+              <h3 class="category-title-{{ section.id }}">{{ block.settings.title }}</h3>
+            {% endif %}
+            {% if block.settings.button_text != blank %}
+              <a href="{{ block.settings.button_link }}" class="category-button-{{ section.id }}">
+                {{ block.settings.button_text }}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Category Grid",
+  "tag": "section",
+  "class": "section-category-grid",
+  "max_blocks": 3,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Heading"
+    },
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section Heading",
+      "default": "Shop By Category"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading Font Size (Desktop)",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size_mobile",
+      "min": 18,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading Font Size (Mobile)",
+      "default": 28
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Heading Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "heading_spacing",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Heading Bottom Spacing (Desktop)",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "heading_spacing_mobile",
+      "min": 15,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "label": "Heading Bottom Spacing (Mobile)",
+      "default": 35
+    },
+    {
+      "type": "header",
+      "content": "Section Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Top Padding (Mobile)",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom Padding (Mobile)",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Grid Settings"
+    },
+    {
+      "type": "range",
+      "id": "grid_gap",
+      "min": 10,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Grid Gap (Desktop)",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "grid_gap_mobile",
+      "min": 10,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Grid Gap (Mobile)",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Border Radius",
+      "default": 6
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "title_font_size",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Title Font Size (Desktop)",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "title_font_size_mobile",
+      "min": 14,
+      "max": 36,
+      "step": 2,
+      "unit": "px",
+      "label": "Title Font Size (Mobile)",
+      "default": 22
+    },
+    {
+      "type": "range",
+      "id": "title_spacing",
+      "min": 10,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Title Bottom Spacing",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "button_font_size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Button Font Size (Desktop)",
+      "default": 13
+    },
+    {
+      "type": "range",
+      "id": "button_font_size_mobile",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Button Font Size (Mobile)",
+      "default": 12
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "Category Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Category Name"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "EXPLORE MORE"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "select",
+          "id": "text_position",
+          "label": "Text Position",
+          "options": [
+            {
+              "value": "top-left",
+              "label": "Top Left"
+            },
+            {
+              "value": "top-center",
+              "label": "Top Center"
+            },
+            {
+              "value": "top-right",
+              "label": "Top Right"
+            },
+            {
+              "value": "center-left",
+              "label": "Center Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "center-right",
+              "label": "Center Right"
+            },
+            {
+              "value": "bottom-left",
+              "label": "Bottom Left"
+            },
+            {
+              "value": "bottom-center",
+              "label": "Bottom Center"
+            },
+            {
+              "value": "bottom-right",
+              "label": "Bottom Right"
+            }
+          ],
+          "default": "bottom-left"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Category Grid",
+      "blocks": [
+        {
+          "type": "category",
+          "settings": {
+            "title": "EVERYDAY ESSENTIALS",
+            "button_text": "EXPLORE MORE",
+            "text_position": "bottom-left"
+          }
+        },
+        {
+          "type": "category",
+          "settings": {
+            "title": "WEDDING",
+            "button_text": "EXPLORE MORE",
+            "text_position": "bottom-left"
+          }
+        },
+        {
+          "type": "category",
+          "settings": {
+            "title": "OVAL BANGLES",
+            "button_text": "EXPLORE MORE",
+            "text_position": "bottom-left"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
