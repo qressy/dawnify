@@ -333,6 +333,41 @@
         "heading_font_size": 24,
         "column_alignment": "left"
       }
+    },
+    "blog_grid_section_XWad8Y": {
+      "type": "blog-grid-section",
+      "blocks": {
+        "faq_pLzXeM": {
+          "type": "faq",
+          "settings": {
+            "question": "",
+            "answer": ""
+          }
+        },
+        "faq_Cf4bcM": {
+          "type": "faq",
+          "settings": {
+            "question": "",
+            "answer": ""
+          }
+        },
+        "faq_TRYkDR": {
+          "type": "faq",
+          "settings": {
+            "question": "",
+            "answer": ""
+          }
+        }
+      },
+      "block_order": [
+        "faq_pLzXeM",
+        "faq_Cf4bcM",
+        "faq_TRYkDR"
+      ],
+      "name": "FAQ Section",
+      "settings": {
+        "heading": "FAQs"
+      }
     }
   },
   "order": [
@@ -342,6 +377,7 @@
     "custom_tab_PE8GEB",
     "category_grid_T3JaKr",
     "best_sellers_product_8rUnik",
-    "parallex_scroll_rrA3zD"
+    "parallex_scroll_rrA3zD",
+    "blog_grid_section_XWad8Y"
   ]
 }
