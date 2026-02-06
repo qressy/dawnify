@@ -272,6 +272,49 @@
         "button_font_size": 13,
         "button_font_size_mobile": 12
       }
+    },
+    "best_sellers_product_8rUnik": {
+      "type": "best-sellers-product",
+      "name": "Bestsellers Collection",
+      "settings": {
+        "featured_collection": "frontpage",
+        "products_to_show": 8,
+        "main_heading": "Bestsellers",
+        "sub_heading": "Bold Gems That Mark Every Moment Forever",
+        "heading_font_size_desktop": 36,
+        "heading_font_size_mobile": 28,
+        "subheading_font_size_desktop": 18,
+        "subheading_font_size_mobile": 14,
+        "heading_color": "#000000",
+        "subheading_color": "#666666",
+        "heading_alignment": "center",
+        "heading_margin_bottom": 40,
+        "products_per_row_desktop": 4,
+        "products_per_row_mobile": "2",
+        "product_gap": 20,
+        "show_product_vendor": false,
+        "enable_image_hover": true,
+        "show_view_all_button": true,
+        "view_all_text": "View All",
+        "view_all_bg_color": "#3d1d10",
+        "view_all_text_color": "#FFFFFF",
+        "view_all_margin_top": 30,
+        "product_title_font_size": 14,
+        "product_price_font_size": 14,
+        "product_title_color": "#000000",
+        "product_price_color": "#000000",
+        "card_background_color": "#FFFFFF",
+        "card_border_color": "#E5E5E5",
+        "card_border_width": 1,
+        "card_border_radius": 0,
+        "card_shadow_enable": true,
+        "card_shadow": "0 2px 8px rgba(0, 0, 0, 0.1)",
+        "card_shadow_hover": "0 4px 16px rgba(0, 0, 0, 0.15)",
+        "card_padding": 15,
+        "section_padding_top": 50,
+        "section_padding_bottom": 50,
+        "background_color": "#FFFFFF"
+      }
     }
   },
   "order": [
@@ -279,6 +322,7 @@
     "rich_text2_xKAeNb",
     "category_9t3NRX",
     "custom_tab_PE8GEB",
-    "category_grid_T3JaKr"
+    "category_grid_T3JaKr",
+    "best_sellers_product_8rUnik"
   ]
 }
