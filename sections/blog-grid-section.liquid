@@ -1,143 +1,1211 @@
-<section class="shopify-section faq-section section_border_top section_border_bottom">
+<footer class="versani-footer">
+  <div class="footer-container">
+    <!-- Footer Links Grid -->
+    <div class="footer-links-grid">
+      <!-- Customer Service Column -->
+      <div class="footer-column">
+        <h3 class="footer-column-title footer-accordion-trigger">
+          {{ section.settings.column_1_title }}
+          <span class="accordion-icon">+</span>
+        </h3>
+        <ul class="footer-links-list footer-accordion-content">
+          {% for block in section.blocks %}
+            {% if block.type == 'column_1_link' %}
+              <li class="footer-link-item">
+                <a href="{{ block.settings.link_url }}" class="footer-link">
+                  {{ block.settings.link_text }}
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
 
-<style>
-.section_border_top { border-top: 1px solid rgba(231,230,229); }
-.section_border_bottom { border-bottom: 1px solid rgba(231,230,229); }
-.faq .container {
-    max-width: 1920px;
-    width: 100%;
-    padding: 0 20px;
-}
-h5.faq-block__heading {
-    margin: 0;
-}
-.faq-summery {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-    padding: 10px 20px;
-    border-top: 1px solid rgba(231, 230, 229);
-}
-.faq-item.active .faq-block__description {
-    display: block;
-    font-size: 13px;
-    padding: 0 20px;
-    line-height: 140%;
-}
-h2.section-header__title.title--section {
-    padding: 20px;
-}
-.faq{overflow:hidden}
-.faq-wrapper{display:flex;flex-wrap:wrap}
-.faq .section-header__text{writing-mode:vertical-rl;transform:rotate(180deg)}
-.faq .faq-img-box{display:flex;flex:0 0 100%}
-@media screen and (min-width:1100px){
-  .faq .faq-img-box{flex:0 0 50%}
-}
-.faq .faq__img{width:100%;position:relative;border-right:.1rem solid rgba(231,230,229);border-left:.1rem solid rgba(231,230,229);min-height:350px;padding:20px}
-.faq .faq__img img{width:100%;height:100%;object-fit:cover;border-radius:var(--border-radius-media)}
-.faq-box{flex:0 0 100%}
-@media screen and (min-width:1100px){.faq-box{flex:0 0 50%}}
+      <!-- Quick Links Column -->
+      <div class="footer-column">
+        <h3 class="footer-column-title footer-accordion-trigger">
+          {{ section.settings.column_2_title }}
+          <span class="accordion-icon">+</span>
+        </h3>
+        <ul class="footer-links-list footer-accordion-content">
+          {% for block in section.blocks %}
+            {% if block.type == 'column_2_link' %}
+              <li class="footer-link-item">
+                <a href="{{ block.settings.link_url }}" class="footer-link">
+                  {{ block.settings.link_text }}
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
 
-.faq-summery{display:flex;align-items:center;justify-content:space-between;cursor:pointer;border-top:1px solid rgba(231,230,229)}
-.faq-block__description{display:none;padding:0 0 2rem 0;max-width:80%}
-.faq-item.active .faq-block__description{display:block}
-.faq-item svg{transition:transform .3s ease}
-.faq-item.active svg{transform:rotate(180deg)}
-</style>
+      <!-- Jewellery Column -->
+      <div class="footer-column">
+        <h3 class="footer-column-title footer-accordion-trigger">
+          {{ section.settings.column_3_title }}
+          <span class="accordion-icon">+</span>
+        </h3>
+        <ul class="footer-links-list footer-accordion-content">
+          {% for block in section.blocks %}
+            {% if block.type == 'column_3_link' %}
+              <li class="footer-link-item">
+                <a href="{{ block.settings.link_url }}" class="footer-link">
+                  {{ block.settings.link_text }}
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
 
-<div class="faq color-background-1 background">
-  <div class="container">
-    <div class="faq-wrapper">
+      <!-- Newsletter Column -->
+      <div class="footer-column footer-column-newsletter">
+        <h3 class="footer-column-title footer-accordion-trigger">
+          {{ section.settings.column_4_title }}
+          <span class="accordion-icon">+</span>
+        </h3>
+        <div class="footer-accordion-content">
+          <p class="newsletter-description-column">{{ section.settings.newsletter_description_column }}</p>
 
-      <!-- LEFT IMAGE + TITLE -->
-      <div class="faq-img-box">
-        <h2 class="section-header__title title--section">
-          <span class="section-header__text">{{ section.settings.heading }}</span>
-        </h2>
+          {% if section.settings.show_newsletter_form_column %}
+            <div class="newsletter-form-wrapper-column">
+              {% form 'customer', class: 'footer-newsletter-form-column' %}
+                {% if form.posted_successfully? %}
+                  <div class="newsletter-success-column">
+                    {{ section.settings.success_message_column }}
+                  </div>
+                {% endif %}
 
-        <div class="faq__img">
-          {% if section.settings.image %}
-            <img src="{{ section.settings.image | image_url: width: 1500 }}" alt="">
+                <div class="newsletter-input-wrapper-column">
+                  <input
+                    type="email"
+                    name="contact[email]"
+                    placeholder="{{ section.settings.email_placeholder_column }}"
+                    class="newsletter-email-input-column"
+                    required
+                    autocomplete="email"
+                  >
+                  <button type="submit" class="newsletter-submit-btn-column" aria-label="Subscribe to newsletter">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
+
+                <input type="hidden" name="contact[tags]" value="newsletter">
+              {% endform %}
+            </div>
+          {% endif %}
+
+          {% if section.settings.show_social_icons_column %}
+            <div class="footer-social-icons-column">
+              {% if section.settings.instagram_url != blank %}
+                <a
+                  href="{{ section.settings.instagram_url }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Versani on Instagram"
+                  class="social-icon-link-column"
+                >
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
+                </a>
+              {% endif %}
+
+              {% if section.settings.facebook_url != blank %}
+                <a
+                  href="{{ section.settings.facebook_url }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Versani on Facebook"
+                  class="social-icon-link-column"
+                >
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                </a>
+              {% endif %}
+
+              {% if section.settings.youtube_url != blank %}
+                <a
+                  href="{{ section.settings.youtube_url }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Versani on YouTube"
+                  class="social-icon-link-column"
+                >
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
+                </a>
+              {% endif %}
+            </div>
           {% endif %}
         </div>
       </div>
+    </div>
 
-      <!-- RIGHT ACCORDION -->
-      <div class="faq-box">
-        {% for block in section.blocks %}
-        <div class="faq-block">
-          <div class="faq-item {% if forloop.first %}active{% endif %}">
-            <div class="faq-summery">
-              <h5 class="faq-block__heading">{{ block.settings.question }}</h5>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M18 13.1667L12 19M12 19L6 13.1667M12 19L12 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <div class="faq-block__description richtext__content">
-              {{ block.settings.answer }}
-            </div>
-          </div>
+    <!-- SEO Keyword Section -->
+    {% if section.settings.show_keywords %}
+      <div class="footer-keywords-section">
+        <h3 class="keywords-title">{{ section.settings.keywords_title }}</h3>
+        <div class="keywords-content">
+          {{ section.settings.keywords_content }}
         </div>
-        {% endfor %}
       </div>
+    {% endif %}
 
+    <!-- Copyright Section -->
+    <div class="footer-copyright">
+      <div class="copyright-content">
+        <p>{{ section.settings.copyright_text }}</p>
+        {% if section.settings.powered_by_text != blank %}
+          <p class="powered-by">{{ section.settings.powered_by_text }}</p>
+        {% endif %}
+      </div>
     </div>
   </div>
-</div>
+</footer>
+
+<style>
+  .versani-footer {
+    background-color: {{ section.settings.background_color }};
+    color: {{ section.settings.text_color }};
+    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+    position: relative;
+  }
+
+  .footer-container {
+    max-width: {{ section.settings.container_width }}px;
+    margin: 0 auto;
+    padding: 0 {{ section.settings.container_padding }}px;
+  }
+
+  /* Footer Links Grid */
+  .footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat({{ section.settings.columns_count }}, 1fr);
+    gap: {{ section.settings.column_gap }}px;
+    padding: {{ section.settings.links_padding_top }}px 0 {{ section.settings.links_padding_bottom }}px;
+  }
+
+  .footer-column-title {
+    font-size: {{ section.settings.column_title_size }}px;
+    font-weight: {{ section.settings.title_font_weight }};
+    margin: 0 0 {{ section.settings.column_title_margin }}px;
+    letter-spacing: {{ section.settings.title_letter_spacing }}px;
+    text-transform: {{ section.settings.column_title_transform }};
+  }
+
+  /* Accordion Styles (Hidden on Desktop) */
+  .accordion-icon {
+    display: none;
+  }
+
+  .footer-accordion-trigger {
+    cursor: default;
+  }
+
+  .footer-accordion-content {
+    display: block;
+  }
+
+  .footer-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-link-item {
+    margin-bottom: {{ section.settings.link_spacing }}px;
+    list-style: none;
+  }
+
+  .footer-link {
+    color: {{ section.settings.text_color }};
+    text-decoration: none;
+    font-size: {{ section.settings.link_font_size }}px;
+    line-height: {{ section.settings.link_line_height }};
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
+    display: inline-block;
+  }
+
+  .footer-link:hover {
+    opacity: 1;
+  }
+
+  /* Newsletter Column Styles */
+  .footer-column-newsletter {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .newsletter-description-column {
+    font-size: {{ section.settings.newsletter_desc_column_size }}px;
+    line-height: {{ section.settings.newsletter_desc_column_line_height }};
+    margin: 0 0 {{ section.settings.newsletter_desc_column_margin }}px;
+    opacity: 0.85;
+  }
+
+  .newsletter-form-wrapper-column {
+    margin-bottom: {{ section.settings.social_column_margin }}px;
+  }
+
+  .newsletter-input-wrapper-column {
+    display: flex;
+    gap: 0;
+    border-bottom: 2px solid {{ section.settings.text_color }};
+    padding-bottom: 8px;
+    align-items: center;
+  }
+
+  .newsletter-email-input-column {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: {{ section.settings.text_color }};
+    font-size: {{ section.settings.input_column_font_size }}px;
+    padding: 8px 0;
+    outline: none;
+  }
+
+  .newsletter-email-input-column::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .newsletter-submit-btn-column {
+    background: transparent;
+    border: none;
+    color: {{ section.settings.text_color }};
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .newsletter-submit-btn-column:hover {
+    transform: translateX(4px);
+    opacity: 0.8;
+  }
+
+  .newsletter-success-column {
+    color: #4ade80;
+    padding: 8px 0;
+    margin-bottom: 12px;
+    font-size: 13px;
+  }
+
+  /* Social Icons in Column */
+  .footer-social-icons-column {
+    display: flex;
+    gap: {{ section.settings.social_column_icon_spacing }}px;
+    align-items: center;
+  }
+
+  .social-icon-link-column {
+    color: {{ section.settings.text_color }};
+    width: {{ section.settings.social_column_icon_size }}px;
+    height: {{ section.settings.social_column_icon_size }}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    opacity: 0.9;
+  }
+
+  .social-icon-link-column:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+
+  .social-icon-link-column svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Keywords Section */
+  .footer-keywords-section {
+    padding: {{ section.settings.keywords_padding }}px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: {{ section.settings.keywords_margin_top }}px;
+    text-align: left;
+  }
+
+  .keywords-title {
+    font-size: {{ section.settings.keywords_title_size }}px;
+    font-weight: {{ section.settings.title_font_weight }};
+    margin: 0 0 {{ section.settings.keywords_title_margin }}px;
+    letter-spacing: {{ section.settings.title_letter_spacing }}px;
+    text-transform: {{ section.settings.title_text_transform }};
+    text-align: left;
+  }
+
+  .keywords-content {
+    font-size: {{ section.settings.keywords_font_size }}px;
+    line-height: {{ section.settings.keywords_line_height }};
+    opacity: 0.75;
+    text-align: left;
+  }
+
+  .keywords-content a {
+    color: {{ section.settings.text_color }};
+    text-decoration: none;
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
+  }
+
+  .keywords-content a:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+
+  /* Copyright */
+  .footer-copyright {
+    text-align: center;
+    padding-top: {{ section.settings.copyright_padding }}px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: {{ section.settings.copyright_margin_top }}px;
+  }
+
+  .copyright-content p {
+    margin: 0 0 8px;
+    font-size: {{ section.settings.copyright_font_size }}px;
+    opacity: 0.7;
+  }
+
+  .powered-by {
+    font-size: {{ section.settings.powered_by_size }}px;
+  }
+
+  /* Responsive Design */
+  @media screen and (max-width: 1024px) {
+    .footer-links-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: {{ section.settings.mobile_column_gap }}px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .versani-footer {
+      padding: {{ section.settings.mobile_padding }}px 0;
+    }
+
+    .footer-container {
+      padding: 0 {{ section.settings.mobile_container_padding }}px;
+    }
+
+    .footer-links-grid {
+      grid-template-columns: {{ section.settings.mobile_columns }};
+      gap: {{ section.settings.mobile_column_gap }}px;
+      text-align: center;
+    }
+
+    /* Mobile Accordion Styles */
+    .footer-column {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    .footer-column:last-child {
+      border-bottom: none;
+    }
+
+    .footer-accordion-trigger {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      position: relative;
+      margin-bottom: 0;
+      padding: 16px 0;
+    }
+
+    .accordion-icon {
+      display: inline-block;
+      font-size: 20px;
+      line-height: 1;
+      transition: transform 0.3s ease;
+      font-weight: 300;
+    }
+
+    .footer-accordion-trigger.active .accordion-icon {
+      transform: rotate(45deg);
+    }
+
+    .footer-accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .footer-accordion-content.active {
+      max-height: 1500px;
+      transition: max-height 0.4s ease-in, padding 0.3s ease-in;
+      padding-top: 0;
+      padding-bottom: 20px;
+    }
+
+    .footer-column-newsletter .footer-accordion-content.active {
+      max-height: 2500px;
+      padding-bottom: 24px;
+    }
+
+    .column-title {
+      font-size: {{ section.settings.mobile_column_title }}px;
+    }
+
+    .footer-link {
+      font-size: {{ section.settings.mobile_link_size }}px;
+    }
+
+    .keywords-content {
+      font-size: {{ section.settings.mobile_keywords_size }}px;
+    }
+
+    .footer-keywords-section,
+    .keywords-title,
+    .keywords-content {
+      text-align: center;
+    }
+
+    .footer-keywords-section {
+      padding-bottom: {{ section.settings.mobile_section_spacing }}px;
+      margin-bottom: {{ section.settings.mobile_section_spacing }}px;
+    }
+  }
+</style>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  document.querySelectorAll(".faq-summery").forEach(summary => {
-    summary.addEventListener("click", function() {
-      const item = this.closest(".faq-item");
-      const section = this.closest(".faq-box");
+  (function() {
+    function initFooterAccordion() {
+      const isMobile = window.innerWidth <= 768;
+      const enableAccordion = {{ section.settings.enable_mobile_accordion | json }};
+      const footerColumns = document.querySelectorAll('.versani-footer .footer-column');
 
-      section.querySelectorAll(".faq-item").forEach(i => {
-        if (i !== item) i.classList.remove("active");
+      footerColumns.forEach(function(column) {
+        const trigger = column.querySelector('.footer-accordion-trigger');
+        const content = column.querySelector('.footer-accordion-content');
+
+        if (!trigger || !content) return;
+
+        if (isMobile && enableAccordion) {
+          // Enable accordion on mobile
+          trigger.style.cursor = 'pointer';
+
+          // Close all by default on initial load
+          if (!trigger.hasAttribute('data-initialized')) {
+            content.classList.remove('active');
+            trigger.classList.remove('active');
+            trigger.setAttribute('data-initialized', 'true');
+          }
+
+          // Remove old event listeners by cloning
+          const newTrigger = trigger.cloneNode(true);
+          trigger.parentNode.replaceChild(newTrigger, trigger);
+
+          // Add click event
+          newTrigger.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const thisContent = this.nextElementSibling;
+            const isActive = this.classList.contains('active');
+
+            // Close all accordions first (only one open at a time)
+            document.querySelectorAll('.versani-footer .footer-accordion-trigger').forEach(function(t) {
+              t.classList.remove('active');
+            });
+            document.querySelectorAll('.versani-footer .footer-accordion-content').forEach(function(c) {
+              c.classList.remove('active');
+            });
+
+            // If this wasn't active, open it (if it was active, leave it closed)
+            if (!isActive) {
+              this.classList.add('active');
+              if (thisContent) {
+                thisContent.classList.add('active');
+              }
+            }
+          });
+        } else {
+          // Desktop or accordion disabled: show all content
+          trigger.style.cursor = 'default';
+          content.classList.remove('active');
+          trigger.classList.remove('active');
+          content.style.maxHeight = 'none';
+          content.style.overflow = 'visible';
+          content.style.paddingTop = '0';
+          content.style.paddingBottom = '0';
+
+          // Remove click handler
+          const newTrigger = trigger.cloneNode(true);
+          trigger.parentNode.replaceChild(newTrigger, trigger);
+        }
       });
+    }
 
-      item.classList.toggle("active");
+    // Initialize on page load
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initFooterAccordion);
+    } else {
+      initFooterAccordion();
+    }
+
+    // Re-initialize on window resize with debounce
+    let resizeTimeout;
+    window.addEventListener('resize', function() {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(function() {
+        initFooterAccordion();
+      }, 250);
     });
-  });
-});
+  })();
 </script>
 
 {% schema %}
 {
-  "name": "FAQ Section",
+  "name": "Versani Footer",
   "settings": [
     {
-      "type": "text",
-      "id": "heading",
-      "label": "Section Heading",
-      "default": "FAQs"
+      "type": "header",
+      "content": "Colors"
     },
     {
-      "type": "image_picker",
-      "id": "image",
-      "label": "Left Image"
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#3d1d10"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Layout Settings"
+    },
+    {
+      "type": "range",
+      "id": "container_width",
+      "label": "Container Max Width",
+      "min": 1000,
+      "max": 1600,
+      "step": 50,
+      "unit": "px",
+      "default": 1400
+    },
+    {
+      "type": "range",
+      "id": "container_padding",
+      "label": "Container Padding",
+      "min": 16,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Footer Columns"
+    },
+    {
+      "type": "range",
+      "id": "columns_count",
+      "label": "Number of Columns (Desktop)",
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "column_gap",
+      "label": "Column Gap",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "links_padding_top",
+      "label": "Links Section Padding Top",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "links_padding_bottom",
+      "label": "Links Section Padding Bottom",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "text",
+      "id": "column_1_title",
+      "label": "Column 1 Title",
+      "default": "CUSTOMER SERVICE"
+    },
+    {
+      "type": "text",
+      "id": "column_2_title",
+      "label": "Column 2 Title",
+      "default": "QUICK LINKS"
+    },
+    {
+      "type": "text",
+      "id": "column_3_title",
+      "label": "Column 3 Title",
+      "default": "JEWELLERY"
+    },
+    {
+      "type": "text",
+      "id": "column_4_title",
+      "label": "Column 4 Title",
+      "default": "SIGN UP TO BE A VERSANI MEMBER"
+    },
+    {
+      "type": "range",
+      "id": "column_title_size",
+      "label": "Column Title Font Size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "select",
+      "id": "column_title_transform",
+      "label": "Column Title Text Transform",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "uppercase", "label": "Uppercase" },
+        { "value": "lowercase", "label": "Lowercase" },
+        { "value": "capitalize", "label": "Capitalize" }
+      ],
+      "default": "uppercase"
+    },
+    {
+      "type": "range",
+      "id": "column_title_margin",
+      "label": "Column Title Bottom Margin",
+      "min": 8,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "link_font_size",
+      "label": "Link Font Size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "link_line_height",
+      "label": "Link Line Height",
+      "min": 1.2,
+      "max": 2.0,
+      "step": 0.1,
+      "default": 1.6
+    },
+    {
+      "type": "range",
+      "id": "link_spacing",
+      "label": "Link Spacing",
+      "min": 4,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Newsletter Column (4th Column)"
+    },
+    {
+      "type": "textarea",
+      "id": "newsletter_description_column",
+      "label": "Newsletter Description",
+      "default": "Sign up today and become part of the Versani family. Enjoy exclusive access to our newest collections, members-only offers, and special privileges."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_newsletter_form_column",
+      "label": "Show Newsletter Form",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "email_placeholder_column",
+      "label": "Email Placeholder",
+      "default": "Enter your email"
+    },
+    {
+      "type": "text",
+      "id": "success_message_column",
+      "label": "Success Message",
+      "default": "Thank you for subscribing!"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_social_icons_column",
+      "label": "Show Social Icons in Column",
+      "default": true
+    },
+    {
+      "type": "url",
+      "id": "instagram_url",
+      "label": "Instagram URL",
+      "info": "Leave blank to hide"
+    },
+    {
+      "type": "url",
+      "id": "facebook_url",
+      "label": "Facebook URL",
+      "info": "Leave blank to hide"
+    },
+    {
+      "type": "url",
+      "id": "youtube_url",
+      "label": "YouTube URL",
+      "info": "Leave blank to hide"
+    },
+    {
+      "type": "range",
+      "id": "newsletter_desc_column_size",
+      "label": "Description Font Size",
+      "min": 12,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "newsletter_desc_column_line_height",
+      "label": "Description Line Height",
+      "min": 1.3,
+      "max": 2.0,
+      "step": 0.1,
+      "default": 1.6
+    },
+    {
+      "type": "range",
+      "id": "newsletter_desc_column_margin",
+      "label": "Description Bottom Margin",
+      "min": 12,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "input_column_font_size",
+      "label": "Input Font Size",
+      "min": 12,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "social_column_margin",
+      "label": "Social Icons Top Margin",
+      "min": 8,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "social_column_icon_size",
+      "label": "Social Icon Size",
+      "min": 20,
+      "max": 36,
+      "step": 2,
+      "unit": "px",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "social_column_icon_spacing",
+      "label": "Social Icon Spacing",
+      "min": 8,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "select",
+      "id": "title_font_weight",
+      "label": "Title Font Weight",
+      "options": [
+        { "value": "400", "label": "Normal" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi Bold" },
+        { "value": "700", "label": "Bold" }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "range",
+      "id": "title_letter_spacing",
+      "label": "Title Letter Spacing",
+      "min": 0,
+      "max": 4,
+      "step": 0.5,
+      "unit": "px",
+      "default": 1
+    },
+    {
+      "type": "select",
+      "id": "title_text_transform",
+      "label": "Title Text Transform",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "uppercase", "label": "Uppercase" },
+        { "value": "lowercase", "label": "Lowercase" },
+        { "value": "capitalize", "label": "Capitalize" }
+      ],
+      "default": "uppercase"
+    },
+    {
+      "type": "header",
+      "content": "SEO Keywords Section"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_keywords",
+      "label": "Show Keywords Section",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "keywords_title",
+      "label": "Keywords Section Title",
+      "default": "POPULAR SEARCHES"
+    },
+    {
+      "type": "html",
+      "id": "keywords_content",
+      "label": "Keywords Content",
+      "default": "<a href=\"/collections/women-rings\">Women's Silver Rings</a> | <a href=\"/collections/women-necklaces\">Women's Necklaces</a> | <a href=\"/collections/women-bracelets\">Women's Bracelets</a>"
+    },
+    {
+      "type": "range",
+      "id": "keywords_padding",
+      "label": "Keywords Padding",
+      "min": 20,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "keywords_margin_top",
+      "label": "Keywords Top Margin",
+      "min": 20,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "keywords_title_size",
+      "label": "Keywords Title Size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "keywords_title_margin",
+      "label": "Keywords Title Bottom Margin",
+      "min": 12,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "keywords_font_size",
+      "label": "Keywords Font Size",
+      "min": 11,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "keywords_line_height",
+      "label": "Keywords Line Height",
+      "min": 1.4,
+      "max": 2.4,
+      "step": 0.1,
+      "default": 1.8
+    },
+    {
+      "type": "header",
+      "content": "Copyright"
+    },
+    {
+      "type": "text",
+      "id": "copyright_text",
+      "label": "Copyright Text",
+      "default": "© 2026 Versani. All rights reserved."
+    },
+    {
+      "type": "text",
+      "id": "powered_by_text",
+      "label": "Powered By Text",
+      "info": "Leave blank to hide",
+      "default": "Powered by Qressy."
+    },
+    {
+      "type": "range",
+      "id": "copyright_padding",
+      "label": "Copyright Padding Top",
+      "min": 20,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "copyright_margin_top",
+      "label": "Copyright Top Margin",
+      "min": 20,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "copyright_font_size",
+      "label": "Copyright Font Size",
+      "min": 11,
+      "max": 16,
+      "step": 1,
+      "unit": "px",
+      "default": 13
+    },
+    {
+      "type": "range",
+      "id": "powered_by_size",
+      "label": "Powered By Font Size",
+      "min": 10,
+      "max": 14,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Mobile Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_mobile_accordion",
+      "label": "Enable Mobile Accordion",
+      "info": "When enabled, footer columns collapse into accordions on mobile. Only one section can be open at a time.",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding",
+      "label": "Mobile Padding",
+      "min": 30,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "mobile_container_padding",
+      "label": "Mobile Container Padding",
+      "min": 16,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "select",
+      "id": "mobile_columns",
+      "label": "Mobile Columns Layout",
+      "options": [
+        { "value": "1fr", "label": "1 Column" },
+        { "value": "repeat(2, 1fr)", "label": "2 Columns" }
+      ],
+      "default": "1fr"
+    },
+    {
+      "type": "range",
+      "id": "mobile_column_gap",
+      "label": "Mobile Column Gap",
+      "min": 20,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "mobile_column_title",
+      "label": "Mobile Column Title Size",
+      "min": 12,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "mobile_link_size",
+      "label": "Mobile Link Size",
+      "min": 12,
+      "max": 16,
+      "step": 1,
+      "unit": "px",
+      "default": 13
+    },
+    {
+      "type": "range",
+      "id": "mobile_keywords_size",
+      "label": "Mobile Keywords Size",
+      "min": 11,
+      "max": 14,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "mobile_section_spacing",
+      "label": "Mobile Section Spacing",
+      "min": 20,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 30
     }
   ],
   "blocks": [
     {
-      "type": "faq",
-      "name": "FAQ Item",
+      "type": "column_1_link",
+      "name": "Customer Service Link",
       "settings": [
-        { "type": "text", "id": "question", "label": "Question" },
-        { "type": "richtext", "id": "answer", "label": "Answer" }
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link Text"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL"
+        }
+      ]
+    },
+    {
+      "type": "column_2_link",
+      "name": "Quick Links Link",
+      "settings": [
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link Text"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL"
+        }
+      ]
+    },
+    {
+      "type": "column_3_link",
+      "name": "Jewellery Link",
+      "settings": [
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link Text"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL"
+        }
       ]
     }
   ],
   "presets": [
     {
-      "name": "FAQ Section",
-      "blocks": [
-        { "type": "faq" },
-        { "type": "faq" },
-        { "type": "faq" }
-      ]
+      "name": "Versani Footer",
+      "category": "Footer"
     }
   ]
 }
