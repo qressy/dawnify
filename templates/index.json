@@ -178,7 +178,7 @@
         "tab_active_color": "#000000",
         "tab_underline_color": "#000000",
         "tab_underline_height": 2,
-        "tab_border_color": "#E5E5E5",
+        "tab_border_color": "#e5e5e5",
         "products_per_row_desktop": 4,
         "products_per_row_mobile": "2",
         "products_to_show": 8,
@@ -188,14 +188,14 @@
         "show_view_all_button": true,
         "view_all_text": "Lorem Ipsum",
         "view_all_bg_color": "#3d1d10",
-        "view_all_text_color": "#FFFFFF",
+        "view_all_text_color": "#ffffff",
         "view_all_margin_top": 30,
         "product_title_font_size": 14,
         "product_price_font_size": 14,
         "product_title_color": "#000000",
         "product_price_color": "#000000",
-        "card_background_color": "#FFFFFF",
-        "card_border_color": "#E5E5E5",
+        "card_background_color": "#ffffff",
+        "card_border_color": "#e5e5e5",
         "card_border_width": 1,
         "card_border_radius": 0,
         "card_shadow_enable": true,
@@ -212,7 +212,65 @@
         "card_padding": 15,
         "section_padding_top": 50,
         "section_padding_bottom": 50,
-        "background_color": "#FFFFFF"
+        "background_color": "#ffffff"
+      }
+    },
+    "category_grid_T3JaKr": {
+      "type": "category-grid",
+      "blocks": {
+        "category_EGJxKj": {
+          "type": "category",
+          "settings": {
+            "title": "EVERYDAY ESSENTIALS",
+            "button_text": "EXPLORE MORE",
+            "button_link": "",
+            "text_position": "bottom-left"
+          }
+        },
+        "category_t8Lxbq": {
+          "type": "category",
+          "settings": {
+            "title": "WEDDING",
+            "button_text": "EXPLORE MORE",
+            "button_link": "",
+            "text_position": "bottom-left"
+          }
+        },
+        "category_F7Bx7c": {
+          "type": "category",
+          "settings": {
+            "title": "OVAL BANGLES",
+            "button_text": "EXPLORE MORE",
+            "button_link": "",
+            "text_position": "bottom-left"
+          }
+        }
+      },
+      "block_order": [
+        "category_EGJxKj",
+        "category_t8Lxbq",
+        "category_F7Bx7c"
+      ],
+      "name": "Category Grid",
+      "settings": {
+        "section_heading": "Shop By Category",
+        "heading_font_size": 36,
+        "heading_font_size_mobile": 28,
+        "heading_alignment": "center",
+        "heading_spacing": 50,
+        "heading_spacing_mobile": 35,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "grid_gap": 20,
+        "grid_gap_mobile": 16,
+        "border_radius": 6,
+        "title_font_size": 28,
+        "title_font_size_mobile": 22,
+        "title_spacing": 20,
+        "button_font_size": 13,
+        "button_font_size_mobile": 12
       }
     }
   },
@@ -220,6 +278,7 @@
     "image_banner",
     "rich_text2_xKAeNb",
     "category_9t3NRX",
-    "custom_tab_PE8GEB"
+    "custom_tab_PE8GEB",
+    "category_grid_T3JaKr"
   ]
 }
