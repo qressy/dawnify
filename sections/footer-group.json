@@ -35,7 +35,7 @@
         "link_font_size": 14,
         "link_line_height": 1.6,
         "link_spacing": 12,
-        "newsletter_description_column": "Sign up today and become part of the Versani family. Enjoy exclusive access to our newest collections, members-only offers, and special privileges.",
+        "newsletter_description_column": "Sign up today and become part of the family. Enjoy exclusive access to our newest collections, members-only offers, and special privileges.",
         "show_newsletter_form_column": true,
         "email_placeholder_column": "Enter your email",
         "success_message_column": "Thank you for subscribing!",
@@ -62,7 +62,7 @@
         "keywords_title_margin": 16,
         "keywords_font_size": 15,
         "keywords_line_height": 1.8,
-        "copyright_text": "© 2026 Versani. All rights reserved.",
+        "copyright_text": "© 2026 Store Name. All rights reserved.",
         "powered_by_text": "Powered by Qressy.",
         "copyright_padding": 32,
         "copyright_margin_top": 32,
@@ -109,6 +109,7 @@
         "footer-1",
         "footer-2"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-1",
         "newsletter_enable": true,
