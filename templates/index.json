@@ -297,14 +297,14 @@
         "show_view_all_button": true,
         "view_all_text": "View All",
         "view_all_bg_color": "#3d1d10",
-        "view_all_text_color": "#FFFFFF",
+        "view_all_text_color": "#ffffff",
         "view_all_margin_top": 30,
         "product_title_font_size": 14,
         "product_price_font_size": 14,
         "product_title_color": "#000000",
         "product_price_color": "#000000",
-        "card_background_color": "#FFFFFF",
-        "card_border_color": "#E5E5E5",
+        "card_background_color": "#ffffff",
+        "card_border_color": "#e5e5e5",
         "card_border_width": 1,
         "card_border_radius": 0,
         "card_shadow_enable": true,
@@ -313,7 +313,25 @@
         "card_padding": 15,
         "section_padding_top": 50,
         "section_padding_bottom": 50,
-        "background_color": "#FFFFFF"
+        "background_color": "#ffffff"
+      }
+    },
+    "parallex_scroll_rrA3zD": {
+      "type": "parallex-scroll",
+      "name": "Parallax Banner",
+      "settings": {
+        "heading": "Little Dreams Become Big Adventures in a Store Filled with Wonder and Joy",
+        "description": "<p>Explore a world of imagination and excitement as tiny aspirations blossom into grand adventures in a collection overflowing with wonder and happiness.</p>",
+        "btn1_label": "Shop Collection",
+        "btn1_link": "",
+        "btn1_bg_color": "",
+        "btn1_color": "",
+        "btn2_label": "Explore New Arrivals",
+        "btn2_link": "",
+        "btn2_bg_color": "",
+        "btn2_color": "",
+        "heading_font_size": 24,
+        "column_alignment": "left"
       }
     }
   },
@@ -323,6 +341,7 @@
     "category_9t3NRX",
     "custom_tab_PE8GEB",
     "category_grid_T3JaKr",
-    "best_sellers_product_8rUnik"
+    "best_sellers_product_8rUnik",
+    "parallex_scroll_rrA3zD"
   ]
 }
