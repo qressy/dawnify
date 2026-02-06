@@ -142,110 +142,77 @@
         "section_padding_bottom": 50
       }
     },
-    "collage": {
-      "type": "collage",
+    "custom_tab_PE8GEB": {
+      "type": "custom-tab",
       "blocks": {
-        "collection-0": {
-          "type": "collection",
+        "tab_hGba37": {
+          "type": "tab",
           "settings": {
-            "collection": ""
+            "tab_title": "Lorem Ipsum",
+            "content_type": "collection",
+            "collection": "frontpage",
+            "tab_content": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>"
           }
         },
-        "product": {
-          "type": "product",
+        "tab_yTCVn3": {
+          "type": "tab",
           "settings": {
-            "product": "",
-            "second_image": false
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
+            "tab_title": "Lorem Ipsum",
+            "content_type": "collection",
+            "collection": "frontpage",
+            "tab_content": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>"
           }
         }
       },
       "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
+        "tab_hGba37",
+        "tab_yTCVn3"
       ],
+      "name": "Custom Tabs",
       "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "enable_video_looping": false,
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column1": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "tab_font_size_desktop": 16,
+        "tab_font_size_mobile": 14,
+        "tab_letter_spacing": "0.05em",
+        "tab_text_transform": "uppercase",
+        "tab_text_color": "#000000",
+        "tab_active_color": "#000000",
+        "tab_underline_color": "#000000",
+        "tab_underline_height": 2,
+        "tab_border_color": "#E5E5E5",
+        "products_per_row_desktop": 4,
+        "products_per_row_mobile": "2",
+        "products_to_show": 8,
+        "product_gap": 20,
+        "show_product_vendor": false,
+        "enable_image_hover": true,
+        "show_view_all_button": true,
+        "view_all_text": "Lorem Ipsum",
+        "view_all_bg_color": "#3d1d10",
+        "view_all_text_color": "#FFFFFF",
+        "view_all_margin_top": 30,
+        "product_title_font_size": 14,
+        "product_price_font_size": 14,
+        "product_title_color": "#000000",
+        "product_price_color": "#000000",
+        "card_background_color": "#FFFFFF",
+        "card_border_color": "#E5E5E5",
+        "card_border_width": 1,
+        "card_border_radius": 0,
+        "card_shadow_enable": true,
+        "card_shadow": "0 2px 8px rgba(0, 0, 0, 0.1)",
+        "card_shadow_hover": "0 4px 16px rgba(0, 0, 0, 0.15)",
+        "content_font_size_desktop": 14,
+        "content_font_size_mobile": 13,
+        "content_text_color": "#666666",
+        "content_line_height": 1.6,
+        "tab_gap_desktop": 40,
+        "tab_gap_mobile": 20,
+        "tab_padding_bottom": 12,
+        "content_padding_top": 30,
+        "card_padding": 15,
+        "section_padding_top": 50,
+        "section_padding_bottom": 50,
+        "background_color": "#FFFFFF"
       }
     }
   },
@@ -253,8 +220,6 @@
     "image_banner",
     "rich_text2_xKAeNb",
     "category_9t3NRX",
-    "collage",
-    "video",
-    "multicolumn"
+    "custom_tab_PE8GEB"
   ]
 }
