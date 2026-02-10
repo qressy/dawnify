@@ -251,6 +251,7 @@
         "category_EGJxKj": {
           "type": "category",
           "settings": {
+            "image": "shopify://shop_images/H-30_Rose_1.jpg",
             "title": "EVERYDAY ESSENTIALS",
             "button_text": "EXPLORE MORE",
             "button_link": "",
@@ -260,6 +261,7 @@
         "category_t8Lxbq": {
           "type": "category",
           "settings": {
+            "image": "shopify://shop_images/H-44_Yellow_3.jpg",
             "title": "WEDDING",
             "button_text": "EXPLORE MORE",
             "button_link": "",
@@ -269,6 +271,7 @@
         "category_F7Bx7c": {
           "type": "category",
           "settings": {
+            "image": "shopify://shop_images/H-30_Yellow_2.jpg",
             "title": "OVAL BANGLES",
             "button_text": "EXPLORE MORE",
             "button_link": "",
