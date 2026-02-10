@@ -53,11 +53,14 @@
         "slide_U3W7yK",
         "slide_66PNbg"
       ],
+      "custom_css": [
+        ".slideshow__controls.slider-buttons.slideshow__controls--border-radius-mobile {display: none;}"
+      ],
       "name": "t:sections.slideshow.presets.name",
       "settings": {
         "layout": "full_bleed",
         "slide_height": "medium",
-        "slider_visual": "counter",
+        "slider_visual": "dots",
         "auto_rotate": false,
         "change_slides_speed": 5,
         "image_behavior": "none",
