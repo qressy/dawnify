@@ -11,7 +11,7 @@
   "current": {
     "logo": "shopify://shop_images/charcoal_4_4x_1.webp",
     "logo_width": 120,
-    "type_header_font": "playfair_display_n4",
+    "type_header_font": "libre_baskerville_n4",
     "heading_scale": 100,
     "type_body_font": "inter_n4",
     "body_scale": 100,
@@ -172,11 +172,11 @@
       },
       "scheme-4": {
         "settings": {
-          "background": "#1f1f23",
+          "background": "#191919",
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#ffffff",
-          "button_label": "#1f1f23",
+          "button_label": "#191919",
           "secondary_button_label": "#ffffff",
           "shadow": "#121212"
         }
