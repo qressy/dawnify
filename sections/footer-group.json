@@ -13,6 +13,98 @@
   "sections": {
     "blog_grid_section_LdhYHf": {
       "type": "blog-grid-section",
+      "blocks": {
+        "column_1_link_zXNKdU": {
+          "type": "column_1_link",
+          "settings": {
+            "link_text": "Privacy Policy",
+            "link_url": ""
+          }
+        },
+        "column_1_link_jzV7C3": {
+          "type": "column_1_link",
+          "settings": {
+            "link_text": "Terms & Condition",
+            "link_url": ""
+          }
+        },
+        "column_1_link_agVNCy": {
+          "type": "column_1_link",
+          "settings": {
+            "link_text": "Shipping Policy",
+            "link_url": ""
+          }
+        },
+        "column_1_link_jkYL8h": {
+          "type": "column_1_link",
+          "settings": {
+            "link_text": "Refund Policy",
+            "link_url": ""
+          }
+        },
+        "column_2_link_WFCWDc": {
+          "type": "column_2_link",
+          "settings": {
+            "link_text": "About Us",
+            "link_url": ""
+          }
+        },
+        "column_2_link_pgBBNz": {
+          "type": "column_2_link",
+          "settings": {
+            "link_text": "FAQs",
+            "link_url": ""
+          }
+        },
+        "column_2_link_biiyhg": {
+          "type": "column_2_link",
+          "settings": {
+            "link_text": "Contact Us",
+            "link_url": ""
+          }
+        },
+        "column_3_link_EAnhxT": {
+          "type": "column_3_link",
+          "settings": {
+            "link_text": "Earrings",
+            "link_url": ""
+          }
+        },
+        "column_3_link_UNGKT4": {
+          "type": "column_3_link",
+          "settings": {
+            "link_text": "Necklace",
+            "link_url": ""
+          }
+        },
+        "column_3_link_iPxDrr": {
+          "type": "column_3_link",
+          "settings": {
+            "link_text": "Rings",
+            "link_url": ""
+          }
+        },
+        "column_3_link_mLxd6z": {
+          "type": "column_3_link",
+          "settings": {
+            "link_text": "Bracelets",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_1_link_zXNKdU",
+        "column_1_link_jzV7C3",
+        "column_1_link_agVNCy",
+        "column_1_link_jkYL8h",
+        "column_2_link_WFCWDc",
+        "column_2_link_pgBBNz",
+        "column_2_link_biiyhg",
+        "column_3_link_EAnhxT",
+        "column_3_link_UNGKT4",
+        "column_3_link_iPxDrr",
+        "column_3_link_mLxd6z"
+      ],
       "name": "New Footer",
       "settings": {
         "background_color": "#f6f1e8",
@@ -27,7 +119,7 @@
         "links_padding_bottom": 40,
         "column_1_title": "CUSTOMER SERVICE",
         "column_2_title": "QUICK LINKS",
-        "column_3_title": "JEWELLERY",
+        "column_3_title": "Shop by Collection",
         "column_4_title": "SIGN UP TO BE A  MEMBER",
         "column_title_size": 14,
         "column_title_transform": "uppercase",
@@ -62,7 +154,7 @@
         "keywords_title_margin": 16,
         "keywords_font_size": 15,
         "keywords_line_height": 1.8,
-        "copyright_text": "© 2026 Store Name. All rights reserved.",
+        "copyright_text": "© 2026 Carbon Clarity. All rights reserved.",
         "powered_by_text": "Powered by Qressy.",
         "copyright_padding": 32,
         "copyright_margin_top": 32,
