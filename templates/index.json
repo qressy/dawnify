@@ -55,7 +55,7 @@
       ],
       "custom_css": [
         ".slideshow__controls.slider-buttons.slideshow__controls--border-radius-mobile {display: none;}",
-        "@media (max-width: 480px) {.slider.slider--everywhere .slider__slide {display: none; }}"
+        "@media (max-width: 480px) {.scroll-trigger:not(.scroll-trigger--offscreen).animate--fade-in {display: none; }}"
       ],
       "name": "Desktop Banner",
       "settings": {
@@ -115,7 +115,7 @@
       ],
       "custom_css": [
         ".slideshow__controls.slider-buttons.slideshow__controls--border-radius-mobile {display: none;}",
-        "@media (min-width: 1024px) {.slider.slider--everywhere .slider__slide {display: none; }}"
+        "@media (min-width: 1024px) {.scroll-trigger:not(.scroll-trigger--offscreen).animate--fade-in {display: none; }}"
       ],
       "name": "Mobile  Banner",
       "settings": {
