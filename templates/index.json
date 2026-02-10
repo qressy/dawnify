@@ -86,7 +86,7 @@
         "button_border_color": "#c9a15d",
         "button_hover_bg_color": "#ffffff",
         "button_hover_text_color": "#3d1d10",
-        "padding_top": 80,
+        "padding_top": 30,
         "padding_bottom": 80
       }
     },
