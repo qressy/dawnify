@@ -15,8 +15,8 @@
       "type": "blog-grid-section",
       "name": "New Footer",
       "settings": {
-        "background_color": "#3d1d10",
-        "text_color": "#ffffff",
+        "background_color": "#f6f1e8",
+        "text_color": "#1f1f23",
         "container_width": 1400,
         "container_padding": 40,
         "padding_top": 80,
