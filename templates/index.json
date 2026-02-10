@@ -299,7 +299,7 @@
         "grid_gap": 20,
         "grid_gap_mobile": 16,
         "border_radius": 6,
-        "title_font_size": 28,
+        "title_font_size": 20,
         "title_font_size_mobile": 22,
         "title_spacing": 20,
         "button_font_size": 13,
