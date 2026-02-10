@@ -54,7 +54,8 @@
         "slide_66PNbg"
       ],
       "custom_css": [
-        ".slideshow__controls.slider-buttons.slideshow__controls--border-radius-mobile {display: none;}"
+        ".slideshow__controls.slider-buttons.slideshow__controls--border-radius-mobile {display: none;}",
+        "@media (max-width: 480px) {.slider.slider--everywhere .slider__slide {display: none; }}"
       ],
       "name": "Desktop Banner",
       "settings": {
