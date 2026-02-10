@@ -92,7 +92,7 @@
         "button_1_link": "",
         "button_2_text": "Know More",
         "button_2_link": "",
-        "background_color": "#ffffff",
+        "background_color": "#f6f1e8",
         "heading_color": "#3d1d10",
         "description_color": "#3d1d10",
         "button_bg_color": "#3d1d10",
@@ -157,7 +157,7 @@
         "card_height_desktop": 500,
         "card_height_mobile": 300,
         "content_position": "flex-end",
-        "background_color": "#ffffff",
+        "background_color": "#f6f1e8",
         "heading_color": "#3d1d10",
         "border_color": "#e0e0e0",
         "overlay_color": "#000000",
@@ -242,7 +242,7 @@
         "card_padding": 15,
         "section_padding_top": 50,
         "section_padding_bottom": 50,
-        "background_color": "#ffffff"
+        "background_color": "#f6f1e8"
       }
     },
     "category_grid_T3JaKr": {
@@ -283,6 +283,9 @@
         "category_EGJxKj",
         "category_t8Lxbq",
         "category_F7Bx7c"
+      ],
+      "custom_css": [
+        ".category-grid-section-template--26685318824301__category_grid_T3JaKr {background-color: #f6f1e8; padding: 30px 0 60px;}"
       ],
       "name": "Category Grid",
       "settings": {
@@ -346,7 +349,7 @@
         "card_padding": 15,
         "section_padding_top": 50,
         "section_padding_bottom": 50,
-        "background_color": "#ffffff"
+        "background_color": "#f6f1e8"
       }
     },
     "parallex_scroll_rrA3zD": {
@@ -358,7 +361,7 @@
         "description": "<p>Explore a world of imagination and excitement as tiny aspirations blossom into grand adventures in a collection overflowing with wonder and happiness.</p>",
         "btn1_label": "Shop Collection",
         "btn1_link": "",
-        "btn1_bg_color": "",
+        "btn1_bg_color": "#f6f1e8",
         "btn1_color": "",
         "btn2_label": "Explore New Arrivals",
         "btn2_link": "",
