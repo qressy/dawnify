@@ -119,6 +119,7 @@
         "collection_CArTBK": {
           "type": "collection",
           "settings": {
+            "image": "shopify://shop_images/H-30_White_2.jpg",
             "title": "Lorem Ipsum",
             "button_text": "Lorem Ipsum",
             "button_link": ""
@@ -127,6 +128,7 @@
         "collection_H9zMAD": {
           "type": "collection",
           "settings": {
+            "image": "shopify://shop_images/H-30_Rose_1.jpg",
             "title": "Lorem Ipsum",
             "button_text": "Lorem Ipsum",
             "button_link": ""
@@ -135,6 +137,7 @@
         "collection_tKXTyA": {
           "type": "collection",
           "settings": {
+            "image": "shopify://shop_images/H-30_Yellow_2.jpg",
             "title": "Lorem Ipsum",
             "button_text": "Lorem Ipsum",
             "button_link": ""
