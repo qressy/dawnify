@@ -86,11 +86,11 @@
       "type": "rich-text2",
       "name": "Custom Richtext Hero",
       "settings": {
-        "heading": "Lorem Ipsum",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-        "button_1_text": "Lorem Ipsum",
+        "heading": "About Us",
+        "description": "Carbon & Clarity was created to change how people experience fine jewellery removing pressure, confusion, and outdated traditions. The brand believes jewellery should feel calm, personal, and informed, not intimidating. By focusing on thoughtful design, honest guidance, and transparent choices between lab-grown and natural diamonds, Carbon & Clarity empowers customers to choose with confidence.",
+        "button_1_text": "Our Collection",
         "button_1_link": "",
-        "button_2_text": "Lorem Ipsum",
+        "button_2_text": "Know More",
         "button_2_link": "",
         "background_color": "#ffffff",
         "heading_color": "#3d1d10",
@@ -112,7 +112,7 @@
           "settings": {
             "image": "shopify://shop_images/H-42_ER_Rose_1.jpg",
             "title": "Lorem Ipsum",
-            "button_text": "Lorem Ipsum",
+            "button_text": "Shop Now",
             "button_link": ""
           }
         },
@@ -121,7 +121,7 @@
           "settings": {
             "image": "shopify://shop_images/H-30_White_2.jpg",
             "title": "Lorem Ipsum",
-            "button_text": "Lorem Ipsum",
+            "button_text": "Shop Now",
             "button_link": ""
           }
         },
@@ -130,7 +130,7 @@
           "settings": {
             "image": "shopify://shop_images/H-30_Rose_1.jpg",
             "title": "Lorem Ipsum",
-            "button_text": "Lorem Ipsum",
+            "button_text": "Shop Now",
             "button_link": ""
           }
         },
@@ -139,7 +139,7 @@
           "settings": {
             "image": "shopify://shop_images/H-30_Yellow_2.jpg",
             "title": "Lorem Ipsum",
-            "button_text": "Lorem Ipsum",
+            "button_text": "Shop Now",
             "button_link": ""
           }
         }
@@ -216,7 +216,7 @@
         "show_product_vendor": false,
         "enable_image_hover": true,
         "show_view_all_button": true,
-        "view_all_text": "Lorem Ipsum",
+        "view_all_text": "View All",
         "view_all_bg_color": "#3d1d10",
         "view_all_text_color": "#ffffff",
         "view_all_margin_top": 30,
