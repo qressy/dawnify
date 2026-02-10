@@ -56,7 +56,66 @@
       "custom_css": [
         ".slideshow__controls.slider-buttons.slideshow__controls--border-radius-mobile {display: none;}"
       ],
-      "name": "t:sections.slideshow.presets.name",
+      "name": "Desktop Banner",
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "dots",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "slideshow_9wcNfg": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_ej7Xqh": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/CC_banner_1_Mob.png",
+            "image_overlay_opacity": 0,
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": ""
+          }
+        },
+        "slide_Q9Rigm": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/CC_banner_2_Mob.png",
+            "image_overlay_opacity": 0,
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_ej7Xqh",
+        "slide_Q9Rigm"
+      ],
+      "custom_css": [
+        ".slideshow__controls.slider-buttons.slideshow__controls--border-radius-mobile {display: none;}"
+      ],
+      "name": "Mobile  Banner",
       "settings": {
         "layout": "full_bleed",
         "slide_height": "medium",
@@ -360,6 +419,7 @@
   },
   "order": [
     "slideshow_heBfQF",
+    "slideshow_9wcNfg",
     "rich_text2_xKAeNb",
     "category_9t3NRX",
     "custom_tab_PE8GEB",
