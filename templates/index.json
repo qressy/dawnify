@@ -178,16 +178,16 @@
         "tab_hGba37": {
           "type": "tab",
           "settings": {
-            "tab_title": "Lorem Ipsum",
+            "tab_title": "Collection 1",
             "content_type": "collection",
             "collection": "frontpage",
             "tab_content": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>"
           }
         },
-        "tab_yTCVn3": {
+        "tab_dAEaJK": {
           "type": "tab",
           "settings": {
-            "tab_title": "Lorem Ipsum",
+            "tab_title": "collection 2",
             "content_type": "collection",
             "collection": "frontpage",
             "tab_content": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>"
@@ -196,7 +196,7 @@
       },
       "block_order": [
         "tab_hGba37",
-        "tab_yTCVn3"
+        "tab_dAEaJK"
       ],
       "name": "Custom Tabs",
       "settings": {
