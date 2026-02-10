@@ -11,41 +11,11 @@
   "sections": {
     "image_banner": {
       "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
+      "disabled": true,
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
+        "image": "shopify://shop_images/CC_banner_1_1.webp",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
         "image_behavior": "none",
         "desktop_content_position": "bottom-center",
         "desktop_content_alignment": "center",
@@ -54,6 +24,62 @@
         "stack_images_on_mobile": false,
         "mobile_content_alignment": "center",
         "show_text_below": false
+      }
+    },
+    "slideshow_heBfQF": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_U3W7yK": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/CC_banner_1.webp",
+            "image_overlay_opacity": 0,
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": ""
+          }
+        },
+        "slide_66PNbg": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/CC_banner_2.webp",
+            "image_overlay_opacity": 0,
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_U3W7yK",
+        "slide_66PNbg"
+      ],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
       }
     },
     "rich_text2_xKAeNb": {
@@ -320,6 +346,7 @@
       "type": "parallex-scroll",
       "name": "Parallax Banner",
       "settings": {
+        "banner_image": "shopify://shop_images/CC_banner_2.webp",
         "heading": "Little Dreams Become Big Adventures in a Store Filled with Wonder and Joy",
         "description": "<p>Explore a world of imagination and excitement as tiny aspirations blossom into grand adventures in a collection overflowing with wonder and happiness.</p>",
         "btn1_label": "Shop Collection",
@@ -336,42 +363,76 @@
     },
     "blog_grid_section_XWad8Y": {
       "type": "blog-grid-section",
-      "blocks": {
-        "faq_pLzXeM": {
-          "type": "faq",
-          "settings": {
-            "question": "",
-            "answer": ""
-          }
-        },
-        "faq_Cf4bcM": {
-          "type": "faq",
-          "settings": {
-            "question": "",
-            "answer": ""
-          }
-        },
-        "faq_TRYkDR": {
-          "type": "faq",
-          "settings": {
-            "question": "",
-            "answer": ""
-          }
-        }
-      },
-      "block_order": [
-        "faq_pLzXeM",
-        "faq_Cf4bcM",
-        "faq_TRYkDR"
-      ],
       "name": "FAQ Section",
       "settings": {
-        "heading": "FAQs"
+        "background_color": "#3d1d10",
+        "text_color": "#ffffff",
+        "container_width": 1400,
+        "container_padding": 40,
+        "padding_top": 80,
+        "padding_bottom": 40,
+        "columns_count": 4,
+        "column_gap": 40,
+        "links_padding_top": 40,
+        "links_padding_bottom": 40,
+        "column_1_title": "CUSTOMER SERVICE",
+        "column_2_title": "QUICK LINKS",
+        "column_3_title": "JEWELLERY",
+        "column_4_title": "SIGN UP TO BE A VERSANI MEMBER",
+        "column_title_size": 14,
+        "column_title_transform": "uppercase",
+        "column_title_margin": 16,
+        "link_font_size": 14,
+        "link_line_height": 1.6,
+        "link_spacing": 12,
+        "newsletter_description_column": "Sign up today and become part of the Versani family. Enjoy exclusive access to our newest collections, members-only offers, and special privileges.",
+        "show_newsletter_form_column": true,
+        "email_placeholder_column": "Enter your email",
+        "success_message_column": "Thank you for subscribing!",
+        "show_social_icons_column": true,
+        "instagram_url": "",
+        "facebook_url": "",
+        "youtube_url": "",
+        "newsletter_desc_column_size": 14,
+        "newsletter_desc_column_line_height": 1.6,
+        "newsletter_desc_column_margin": 16,
+        "input_column_font_size": 14,
+        "social_column_margin": 16,
+        "social_column_icon_size": 28,
+        "social_column_icon_spacing": 12,
+        "title_font_weight": "600",
+        "title_letter_spacing": 1,
+        "title_text_transform": "uppercase",
+        "show_keywords": true,
+        "keywords_title": "POPULAR SEARCHES",
+        "keywords_content": "<a href=\"/collections/women-rings\">Women's Silver Rings</a> | <a href=\"/collections/women-necklaces\">Women's Necklaces</a> | <a href=\"/collections/women-bracelets\">Women's Bracelets</a>",
+        "keywords_padding": 32,
+        "keywords_margin_top": 32,
+        "keywords_title_size": 14,
+        "keywords_title_margin": 16,
+        "keywords_font_size": 15,
+        "keywords_line_height": 1.8,
+        "copyright_text": "© 2026 Versani. All rights reserved.",
+        "powered_by_text": "Powered by Qressy.",
+        "copyright_padding": 32,
+        "copyright_margin_top": 32,
+        "copyright_font_size": 13,
+        "powered_by_size": 12,
+        "enable_mobile_accordion": true,
+        "mobile_padding": 50,
+        "mobile_container_padding": 20,
+        "mobile_columns": "1fr",
+        "mobile_column_gap": 30,
+        "mobile_column_title": 14,
+        "mobile_link_size": 13,
+        "mobile_keywords_size": 12,
+        "mobile_section_spacing": 30
       }
     }
   },
   "order": [
     "image_banner",
+    "slideshow_heBfQF",
     "rich_text2_xKAeNb",
     "category_9t3NRX",
     "custom_tab_PE8GEB",
