@@ -114,7 +114,8 @@
         "slide_Q9Rigm"
       ],
       "custom_css": [
-        ".slideshow__controls.slider-buttons.slideshow__controls--border-radius-mobile {display: none;}"
+        ".slideshow__controls.slider-buttons.slideshow__controls--border-radius-mobile {display: none;}",
+        "@media (min-width: 1024px) {.slider.slider--everywhere .slider__slide {display: none; }}"
       ],
       "name": "Mobile  Banner",
       "settings": {
