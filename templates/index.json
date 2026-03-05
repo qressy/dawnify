@@ -157,7 +157,7 @@
         "collection_DcfaXp": {
           "type": "collection",
           "settings": {
-            "image": "shopify://shop_images/H-42_ER_Rose_1.jpg",
+            "image": "shopify://shop_images/Product_Banner_1.webp",
             "title": "Lorem Ipsum",
             "button_text": "Shop Now",
             "button_link": ""
@@ -166,25 +166,25 @@
         "collection_CArTBK": {
           "type": "collection",
           "settings": {
-            "image": "shopify://shop_images/H-30_White_2.jpg",
+            "image": "shopify://shop_images/Product_Banner_4.webp",
             "title": "Lorem Ipsum",
             "button_text": "Shop Now",
+            "button_link": ""
+          }
+        },
+        "collection_tHdWTD": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify://shop_images/Product_Banner_3.webp",
+            "title": "Lorem Ipsum",
+            "button_text": "Lorem Ipsum",
             "button_link": ""
           }
         },
         "collection_H9zMAD": {
           "type": "collection",
           "settings": {
-            "image": "shopify://shop_images/H-30_Rose_1.jpg",
-            "title": "Lorem Ipsum",
-            "button_text": "Shop Now",
-            "button_link": ""
-          }
-        },
-        "collection_tKXTyA": {
-          "type": "collection",
-          "settings": {
-            "image": "shopify://shop_images/H-30_Yellow_2.jpg",
+            "image": "shopify://shop_images/Product_Banner_2.webp",
             "title": "Lorem Ipsum",
             "button_text": "Shop Now",
             "button_link": ""
@@ -194,8 +194,8 @@
       "block_order": [
         "collection_DcfaXp",
         "collection_CArTBK",
-        "collection_H9zMAD",
-        "collection_tKXTyA"
+        "collection_tHdWTD",
+        "collection_H9zMAD"
       ],
       "name": "Custom Collection",
       "settings": {
