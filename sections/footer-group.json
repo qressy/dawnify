@@ -18,28 +18,28 @@
           "type": "column_1_link",
           "settings": {
             "link_text": "Privacy Policy",
-            "link_url": ""
+            "link_url": "shopify://policies/privacy-policy"
           }
         },
         "column_1_link_jzV7C3": {
           "type": "column_1_link",
           "settings": {
             "link_text": "Terms & Condition",
-            "link_url": ""
+            "link_url": "shopify://policies/terms-of-service"
           }
         },
         "column_1_link_agVNCy": {
           "type": "column_1_link",
           "settings": {
             "link_text": "Shipping Policy",
-            "link_url": ""
+            "link_url": "shopify://policies/shipping-policy"
           }
         },
         "column_1_link_jkYL8h": {
           "type": "column_1_link",
           "settings": {
             "link_text": "Refund Policy",
-            "link_url": ""
+            "link_url": "shopify://policies/refund-policy"
           }
         },
         "column_2_link_WFCWDc": {
