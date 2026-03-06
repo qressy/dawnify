@@ -46,7 +46,7 @@
           "type": "column_2_link",
           "settings": {
             "link_text": "About Us",
-            "link_url": ""
+            "link_url": "shopify://pages/about-us"
           }
         },
         "column_2_link_pgBBNz": {
